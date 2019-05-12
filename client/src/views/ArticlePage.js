@@ -29,7 +29,7 @@ const articles = Vue.component('articles', {
     getArticle() {
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles/${this.$route.params.id}/${this.$route.params.slug}`,
+        url: `${baseUrl}/articles/${this.$route.params.id}/${this.$route.params.slug}`,
       })
       .then(({ data }) => {
         this.content = {...data.post};

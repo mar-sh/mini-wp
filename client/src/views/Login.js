@@ -49,7 +49,7 @@ const login = Vue.component('login', {
     userLogin() {
       axios({
         method: 'POST',
-        url: 'http://localhost:3000/login',
+        url: `${baseUrl}/login`,
         data: {
           email: this.email,
           password: this.password,

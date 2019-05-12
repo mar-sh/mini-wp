@@ -55,7 +55,7 @@ Vue.component('article-container', {
       () =>  {
         axios({
           method: 'DELETE',
-          url: `http://localhost:3000/articles/${id}`,
+          url: `${baseUrl}/articles/${id}`,
           headers: {
             Authorization: localStorage.getItem('token'),
           },

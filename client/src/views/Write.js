@@ -32,7 +32,7 @@ const write = Vue.component("write", {
             </v-text-field>
             <vue-tags-input placeholder="Input your tags here" class="ml-4 pl-2 mb-4" v-model="tag" :tags="tags" @tags-changed="newTags => tags = newTags"/>
             <wysiwyg v-model=body
-              :options="{ image: { uploadURL: 'http://localhost:3000/users/content/image', dropzoneOptions: {} } }"></wysiwyg>
+              :options="{ image: { uploadURL: 'https://api-mwp.demarsh.dev/users/content/image', dropzoneOptions: {} } }"></wysiwyg>
           </v-form>
         </v-card-text>
         <v-card-actions class="justify-space-between">
@@ -103,7 +103,7 @@ const write = Vue.component("write", {
         () => {
           axios({
             method: 'PUT',
-            url: `http://localhost:3000/articles/${this.article._id}`,
+            url: `${baseUrl}/articles/${this.article._id}`,
             headers: {
               Authorization: `${localStorage.getItem('token')}`
             },
@@ -147,7 +147,7 @@ const write = Vue.component("write", {
          () => {
           axios({
             method: 'POST',
-            url: 'http://localhost:3000/articles',
+            url: `${baseUrl}/articles`,
             headers: {
               Authorization: `${localStorage.getItem('token')}`
             },

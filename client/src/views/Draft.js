@@ -37,7 +37,7 @@ const draft = Vue.component('draft', {
     getArticleDrafts() {
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles?userId=${localStorage.getItem('userId')}&published=false`,
+        url: `${baseUrl}/articles?userId=${localStorage.getItem('userId')}&published=false`,
       })
         .then(({ data }) => {
           this.articles = [...data.posts];
@@ -49,7 +49,7 @@ const draft = Vue.component('draft', {
     getDraft(id){
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles/${id}`,
+        url: `${baseUrl}/articles/${id}`,
         headers: {
           Authorization: localStorage.getItem('token'),
         },
@@ -76,7 +76,7 @@ const draft = Vue.component('draft', {
     getSearchedItems(payload) {
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles/search?userId=${localStorage.getItem('userId')}&published=false`,
+        url: `${baseUrl}/articles/search?userId=${localStorage.getItem('userId')}&published=false`,
         params: {
           tag: payload,
           title: payload,

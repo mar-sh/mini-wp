@@ -25,7 +25,7 @@ const search = Vue.component('search', {
     getSearchedItems(tag) {
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles/search?published=true`,
+        url: `${baseUrl}/articles/search?published=true`,
         params: {
           tag,
         },

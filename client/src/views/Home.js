@@ -32,7 +32,7 @@ const home = Vue.component('home', {
     getPublishedArticles() {
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles?published=true`,
+        url: `${baseUrl}/articles?published=true`,
       })
         .then(({ data }) => {
           this.articles = [...data.posts];
@@ -49,7 +49,7 @@ const home = Vue.component('home', {
     getSearchedItems(payload) {
       axios({
         method: 'GET',
-        url: `http://localhost:3000/articles/search?published=true`,
+        url: `${baseUrl}/articles/search?published=true`,
         params: {
           author: payload,
           tag: payload,

@@ -35,7 +35,7 @@ const register = Vue.component('register', {
     userRegister() {
       axios({
         method: 'POST',
-        url: 'http://localhost:3000/register',
+        url: `${baseUrl}/register`,
         data: {
           username: this.username,
           email: this.email,
