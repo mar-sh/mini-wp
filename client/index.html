@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-signin-client_id" content="518981122270-8ud2id6b7nstprn6fsheb8plcbcj5bu3.apps.googleusercontent.com">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
+  <link rel="stylesheet" href="assets/wysiwyg/vueWysiwyg.css">
+  <link rel="stylesheet" href="assets/stylesheet/style.css">
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <title>Mini-WP</title>
+</head>
+
+<body>
+  <div id="app">
+    <v-app>  
+    <navbar></navbar>
+      <v-container grid-list-md fluid>
+        <v-layout row wrap>
+            <sidenav></sidenav>
+            <v-content>
+              <router-view > 
+              </router-view>
+            </v-content>
+        </v-layout> 
+      </v-container>  
+      <appfooter></appfooter>   
+    </v-app>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+  <script src="https://unpkg.com/@johmun/vue-tags-input/dist/vue-tags-input.js"></script>
+  <script src="assets/wysiwyg/vueWysiwyg.js"></script>
+  <!-- Event bus and mixins -->
+  <script src="src/global.js"></script>
+  <!-- Components -->
+  <script src="src/components/ArticleContainer.js"></script>
+  <script src="src/components/SearchBar.js"></script>
+  <script src="src/components/SideNav.js"></script>
+  <script src="src/components/Navbar.js"></script>
+  <script src="src/components/Footer.js"></script>
+  <!-- Views -->
+  <script src="src/views/Register.js"></script>
+  <script src="src/views/Login.js"></script>
+  <script src="src/views/Search.js"></script>
+  <script src="src/views/ArticlePage.js"></script>
+  <script src="src/views/Write.js"></script>
+  <script src="src/views/Published.js"></script>
+  <script src="src/views/Draft.js"></script>
+  <script src="src/views/Home.js"></script>
+  <!-- Main -->
+  <script src="src/router.js"></script>
+  <script src="src/main.js"></script>
+  <script src="src/glogin.js"></script>
+</body>
+
+</html>
