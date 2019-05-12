@@ -10,7 +10,7 @@ const morgan = require('morgan');
 dotenv.config();
 
 const app = express();
-const dbURL = process.env.MONGODB_URL || `mongodb://localhost:27017/${process.env.MONGODB_DOCUMENT}`;
+const dbURL = process.env.ATLAS_URI || `mongodb://localhost:27017/${process.env.MONGODB_DOCUMENT}`;
 const port = process.env.PORT || 3000;
 
 const mainRoute = require('./routes/web');
