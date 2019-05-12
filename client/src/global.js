@@ -1,5 +1,6 @@
+// const baseUrl = `https://api-mwp.demarsh.dev`;
+const baseUrl = `http://localhost:3000`;
 const EventBus = new Vue();
-const baseUrl = `https://api-mwp.demarsh.dev`;
 const mixin = {
   data() {
     return {
@@ -23,7 +24,7 @@ function startApp() {
   gapi.load("auth2", function() {
     auth2 = gapi.auth2.init({
       client_id:
-        "719300865364-acu631ns5i9gvsaqeuf5epfautmd5n5l.apps.googleusercontent.com",
+        "518981122270-8ud2id6b7nstprn6fsheb8plcbcj5bu3.apps.googleusercontent.com",
       cookiepolicy: "single_host_origin"
       // Request scopes in addition to 'profile' and 'email'
       //scope: 'additional_scope'
