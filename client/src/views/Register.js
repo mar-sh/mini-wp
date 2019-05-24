@@ -53,7 +53,7 @@ const register = Vue.component('register', {
           userId: localStorage.getItem('userId')
         });
         alertify.success('Welcome to MWP');
-        this.$router.replace({ name: 'home' });
+        this.$router.push({ name: 'home' });
       })
       .catch((error) => {
         console.log(error);

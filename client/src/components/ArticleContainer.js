@@ -45,7 +45,7 @@ Vue.component('article-container', {
   },
   methods: {
     readArticle() {
-      this.$router.replace({ name: 'articles', params: { id: this.article._id, slug: this.article.slug } });
+      this.$router.push({ name: 'articles', params: { id: this.article._id, slug: this.article.slug } });
     },
     goEditDraft(id) {
      this.$emit('edit-draft', id);
@@ -63,7 +63,7 @@ Vue.component('article-container', {
           .then(({  }) => {
             this.$emit('article-delete', id);
                 if(this.$route.name === 'edit' && this.$route.params.id) {
-                  this.$router.replace({ name: 'draft' });
+                  this.$router.push({ name: 'draft' });
                 }
               alertify.success('Deleted');
           })

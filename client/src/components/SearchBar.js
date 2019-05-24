@@ -1,6 +1,7 @@
 Vue.component('search-bar', {
   template: `
-  <v-flex xs12>
+  <v-flex xs12></v-flex>
+
     <v-toolbar
       dense
       floating
@@ -9,6 +10,7 @@ Vue.component('search-bar', {
     >
       <v-text-field
         v-model="keyword"
+        @keyup.enter="goSearch"
         hide-details
         single-line
         placeholder="tags, title, or author.."

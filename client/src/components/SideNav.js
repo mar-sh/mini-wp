@@ -38,15 +38,15 @@ mixins: [mixin],
       items: [
         { title: 'Home', 
           icon:'home', 
-          action: () => this.$router.replace({ name: 'home' } )
+          action: () => this.$router.push({ name: 'home' } )
         },
         { title: 'Published',
            icon: 'format_align_center',
-           action: () => this.$router.replace({ name: 'published' }) 
+           action: () => this.$router.push({ name: 'published' }) 
         },
         { title: 'Draft',
            icon: 'edit',
-           action: () => this.$router.replace({ name: 'draft' })
+           action: () => this.$router.push({ name: 'draft' })
         },
       ],
       right: null,

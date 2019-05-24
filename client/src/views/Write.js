@@ -123,7 +123,7 @@ const write = Vue.component("write", {
                 this.$emit('edited-draft', this.article._id);
                 alertify.success(msg);
               }
-              this.$router.replace({ name: 'draft' });
+              this.$router.push({ name: 'draft' });
             })
             .catch((error) => {
               alertify.error("Something went wrong when adding article");

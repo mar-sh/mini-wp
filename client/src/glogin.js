@@ -25,7 +25,7 @@ function attachSignin(element) {
             userId: localStorage.getItem('userId')
           });
           alertify.success('Welcome to MWP');
-          vm.$router.replace({ name: 'home' });
+          vm.$router.push({ name: 'home' });
         })
         .catch((error) => {
           console.log(error);

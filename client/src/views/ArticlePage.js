@@ -40,7 +40,7 @@ const articles = Vue.component('articles', {
     },
     searchByTag(tag){
       EventBus.$emit('search-for-tag', tag);
-      this.$router.replace({ name: 'search', params: { tag } });
+      this.$router.push({ name: 'search', params: { tag } });
     }
   },
   computed: {

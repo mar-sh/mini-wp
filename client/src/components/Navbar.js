@@ -32,23 +32,27 @@ Vue.component("navbar", {
   },
   methods: {
     goHome() {
-      this.$router.replace({ name: "home" });
+      this.$router.push({ name: "home" });
     },
     goLogin() {
-      this.$router.replace({ name: "login" });
+      this.$router.push({ name: "login" });
     },
     goRegister() {
-      this.$router.replace({ name: 'register' });
+      this.$router.push({ name: 'register' });
     },
     goWrite() {
-      this.$router.replace({ name: 'write' });
+      this.$router.push({ name: 'write' });
     },
     userLogout(){
-      EventBus.$emit('logged-out', false);
-      this.isLoggedIn = false;
-      localStorage.clear();
-      alertify.success('Bye, See you soon!');
-      this.$router.replace({ name: 'login' });
+      console.log(gapi)
+      const auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(() => {
+        EventBus.$emit('logged-out', false);
+        this.isLoggedIn = false;
+        localStorage.clear();
+        alertify.success('Bye, See you soon!');
+        this.$router.push({ name: 'login' });
+      });
     },
   },
 },);
